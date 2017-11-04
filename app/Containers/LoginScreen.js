@@ -24,10 +24,18 @@ export default class LoginScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text> LoginScreen </Text>
+        <Text
+          onPress = {() => this.props.navigation.navigate ( 'signup')} >
+          Go to the signup screen
+        </Text>
 
         <Text
-          onPress = {() => this.props.navigation.navigate( 'drawerStack' )} >
+          onPress = {() => this.props.navigation.navigate ( 'forgottenPassword')} >
+          Go to the Forgotten Password screen
+        </Text>
+
+        <Text
+          onPress = {() => this.props.navigation.navigate ( 'drawerStack' )} >
           Pretend we logged in
         </Text>
       </View>

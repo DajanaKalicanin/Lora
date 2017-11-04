@@ -19,6 +19,7 @@
  import SignupScreen from '../Containers/SignupScreen';
  import ForgottenPasswordScreen from '../Containers/ForgottenPasswordScreen';
  import DrawerScreen1 from '../Containers/DrawerScreen1';
+ import DrawerContainer from '../Containers/DrawerContainer';
 
  // loginStack
  const LoginStack = StackNavigator ({
@@ -35,7 +36,9 @@
 
  // drawerStack
  const DrawerStack = DrawerNavigator ({
-   screen1: { screen: DrawerScreen1 }
+   screen1: { screen: DrawerScreen1 },
+  }, {
+    contentComponent: DrawerContainer
  });
 
  // drawer possible screens
@@ -46,7 +49,15 @@
    navigationOptions: ({ navigation }) => ({
      headerStyle: { backgroundColor: 'green' },
      title: 'Logged in to your app!',
-     headerLeft: <Text onPress = {() => navigation.navigate('DrawerOpen')}> Menu </Text>
+     gesturesEnabled: false,
+     headerLeft: <Text onPress = {() => {
+      //  if (navigation.state.index === 0) {
+      //    navigation.navigate('DrawerOpen')
+      // } else {
+      //   navigation.navigate( 'DrawerClose')
+      // }
+      navigation.navigate( 'DrawerToggle' )
+    }} > Menu </Text>
    })
  })
 
