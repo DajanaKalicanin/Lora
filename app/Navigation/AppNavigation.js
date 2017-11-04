@@ -59,7 +59,7 @@
       navigation.navigate( 'DrawerToggle' )
     }} > Menu </Text>
    })
- })
+ });
 
  // possible screens
  const PrimaryNav = StackNavigator({

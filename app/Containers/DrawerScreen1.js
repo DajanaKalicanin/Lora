@@ -24,12 +24,6 @@ export default class DrawerPage1 extends React.Component {
   render() {
     return (
       <View>
-        <Text> DrawerPage1 </Text>
-
-        <Text
-          onPress = {() => this.props.navigation.navigate( 'login')} >
-          Pretend we logged out
-        </Text>
       </View>
     );
   }

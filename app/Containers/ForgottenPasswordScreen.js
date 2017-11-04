@@ -24,7 +24,6 @@ export default class ForgottenPasswordScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text> ForgottenPasswordScreen </Text>
       </View>
     );
   }
