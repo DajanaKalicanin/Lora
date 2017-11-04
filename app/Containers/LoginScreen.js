@@ -18,16 +18,21 @@ import {
 
 export default class LoginScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome',
+    title: 'LoginScreen',
   };
 
   render() {
     return (
       <View>
-        <Text> Ja tebe mnogoooo volim, idi stavi kafu </Text>
+        <Text> LoginScreen </Text>
+
+        <Text
+          onPress = {() => this.props.navigation.navigate( 'drawerStack' )} >
+          Pretend we logged in
+        </Text>
       </View>
-    );
+    )
   }
-}
+};
 
 AppRegistry.registerComponent('LoginScreen', () => LoginScreen);
